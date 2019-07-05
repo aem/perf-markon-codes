@@ -6,7 +6,7 @@ import 'prism-themes/themes/prism-a11y-dark.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import '../prism-numbers-custom.css';
 
-const EDGE_COLOR = 'rgba(64,191,255, 0.3)';
+const EDGE_COLOR = 'rgba(64,191,255, 0.7)';
 
 const Footer = styled.div`
   padding-top: 1.5rem;
@@ -19,10 +19,10 @@ const Container = styled.div`
   min-height: 100vh;
   position: relative;
   background-image: linear-gradient(
-    to right,
+    -78deg,
     ${EDGE_COLOR},
-    white 10%,
-    white 90%,
+    white 12%,
+    white 88%,
     ${EDGE_COLOR}
   );
 `;
@@ -91,6 +91,7 @@ class Layout extends React.Component {
             © Adam Markon 2019 - {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
+            &nbsp;&nbsp;•&nbsp;&nbsp;<a href="/rss.xml">RSS feed</a>
           </Footer>
         </div>
       </Container>
