@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import { Helmet } from 'react-helmet';
+import SEO from '../components/seo';
 
 const List = styled.ul`
   margin-left: 0;
@@ -20,7 +20,7 @@ const formatTag = string => {
 const Tags = ({ data, location }) => {
   return (
     <Layout location={location} title={data.site.siteMetadata.title}>
-      <Helmet title="Tags" />
+      <SEO title="Tags" />
       <h2>See articles tagged with...</h2>
       <List>
         {data.allMarkdownRemark.group

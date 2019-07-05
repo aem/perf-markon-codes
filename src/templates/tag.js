@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import { Helmet } from 'react-helmet';
+import SEO from '../components/seo';
 
 const Article = styled.li`
   list-style: none;
@@ -24,7 +24,7 @@ const Description = styled.p`
 const Tags = ({ pageContext, data, location }) => {
   return (
     <Layout location={location} title={data.site.siteMetadata.title}>
-      <Helmet title={`Articles Tagged With "${pageContext.tag}"`} />
+      <SEO title={`Articles Tagged With "${pageContext.tag}"`} />
       <h2>Articles Tagged With "{pageContext.tag}"</h2>
       <hr />
       <List>

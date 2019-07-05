@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { rhythm, scale } from '../utils/typography';
+import Helmet from 'react-helmet';
 import 'prism-themes/themes/prism-a11y-dark.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import '../prism-numbers-custom.css';
