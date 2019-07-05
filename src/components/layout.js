@@ -6,8 +6,21 @@ import 'prism-themes/themes/prism-a11y-dark.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import '../prism-numbers-custom.css';
 
+const EDGE_COLOR = 'rgba(64,191,255, 0.3)';
+
 const Footer = styled.div`
+  padding-top: 1.5rem;
   font-size: 0.8rem;
+`;
+
+const Container = styled.div`
+  background-image: linear-gradient(
+    to right,
+    ${EDGE_COLOR},
+    white 10%,
+    white 90%,
+    ${EDGE_COLOR}
+  );
 `;
 
 class Layout extends React.Component {
@@ -41,7 +54,7 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            ...scale(0.2),
             marginTop: 0,
           }}
         >
@@ -53,28 +66,30 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            « Back to home
           </Link>
         </h3>
       );
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <Footer>
-          © 2019 - {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
-      </div>
+      <Container>
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          }}
+        >
+          <header>{header}</header>
+          <main>{children}</main>
+          <Footer>
+            © Adam Markon 2019 - {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </Footer>
+        </div>
+      </Container>
     );
   }
 }

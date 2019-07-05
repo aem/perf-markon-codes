@@ -39,7 +39,15 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.title}
         </h1>
-        <Tags>Tags: {post.frontmatter.tags.join(', ')}</Tags>
+        <Tags>
+          Tags:{' '}
+          {post.frontmatter.tags.map((tag, idx) => (
+            <Link to={`tag/${tag}`}>
+              {tag}
+              {idx < post.frontmatter.tags.length - 1 ? ', ' : ''}
+            </Link>
+          ))}
+        </Tags>
         <p
           style={{
             ...scale(-1 / 5),

@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "perf-markon-codes",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A blog about performnce and other JavaScript musings",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Adam Markon <amarkon895@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/aem/perf-markon-codes/issues"
   },
   "dependencies": {
     "@weknow/gatsby-remark-twitter": "^0.2.1",
@@ -16,6 +16,7 @@
     "gatsby-plugin-offline": "^2.2.1",
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-sharp": "^2.2.2",
+    "gatsby-plugin-typescript": "^2.1.0",
     "gatsby-plugin-typography": "^2.3.0",
     "gatsby-remark-copy-linked-files": "^2.1.0",
     "gatsby-remark-external-links": "^0.0.4",
@@ -42,15 +43,10 @@
     "gh-pages": "^2.0.1",
     "prettier": "^1.18.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
+  "homepage": "https://perf.markon.codes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/aem/perf-markon-codes.git"
   },
   "scripts": {
     "build": "gatsby build",

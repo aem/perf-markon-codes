@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -26,18 +26,19 @@ const Bio = () => {
           author
           social {
             twitter
+            instagram
+            github
           }
         }
       }
     }
-  `)
+  `);
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
   return (
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
       }}
     >
       <Image
@@ -54,17 +55,44 @@ const Bio = () => {
         }}
       />
       <p>
-        <strong>{author}</strong> is a Senior Software Engineer on{" "}
-        <a href="https://www.hubspot.com">HubSpot's</a> CRM Performance team.
-        Outside of work he loves cycling, photography, and embarassing his
-        friends by telling awful jokes in public. You can follow him on
-        <a href={`https://twitter.com/${social.twitter}`}> Twitter, </a>
-        <a href={`https://instagram.com/${social.instagram}`}>Instagram, </a>
+        <strong>{author}</strong> is a Senior Software Engineer on{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.hubspot.com"
+        >
+          HubSpot's
+        </a>{' '}
+        CRM Performance team. Outside of work he loves cycling, photography, and
+        embarassing his friends by telling awful jokes in public. You can follow
+        him on
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://twitter.com/${social.twitter}`}
+        >
+          {' '}
+          Twitter,{' '}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://instagram.com/${social.instagram}`}
+        >
+          Instagram,{' '}
+        </a>
         and
-        <a href={`https://github.com/${social.github}`}> GitHub.</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://github.com/${social.github}`}
+        >
+          {' '}
+          GitHub.
+        </a>
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;
