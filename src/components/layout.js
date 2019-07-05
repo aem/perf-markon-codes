@@ -11,9 +11,13 @@ const EDGE_COLOR = 'rgba(64,191,255, 0.3)';
 const Footer = styled.div`
   padding-top: 1.5rem;
   font-size: 0.8rem;
+  position: absolute;
+  bottom: 50px;
 `;
 
 const Container = styled.div`
+  min-height: 100vh;
+  position: relative;
   background-image: linear-gradient(
     to right,
     ${EDGE_COLOR},
