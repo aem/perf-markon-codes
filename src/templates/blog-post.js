@@ -1,16 +1,29 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm, scale } from '../utils/typography';
+
+const EndOfStory = styled.div`
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  margin-bottom: 0.8rem;
+`;
+
+const Tags = styled.p`
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+`;
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -26,6 +39,7 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.title}
         </h1>
+        <Tags>Tags: {post.frontmatter.tags.join(', ')}</Tags>
         <p
           style={{
             ...scale(-1 / 5),
@@ -36,6 +50,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <EndOfStory>⏭</EndOfStory>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -68,11 +83,11 @@ class BlogPostTemplate extends React.Component {
           </li>
         </ul>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -90,7 +105,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }
-`
+`;

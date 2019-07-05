@@ -1,0 +1,13 @@
+.gatsby-highlight {
+  background-color: rgb(43, 43, 43);
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 0.6em 1.4em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding: 0;
+  padding-left: 2em;
+  overflow: initial;
+}
