@@ -1,7 +1,7 @@
 ---
 title: Reframing the Discussion on Web Performance
 date: '2019-07-05'
-description: 'Before talking about web performance we need to set some base understandings. Every site is different, performance is a moving target, and performance must be data-driven.'
+description: "Technical discussions about web performance require a shared framework for discussion. Without this shared understanding, some of these discussions will be difficult to grasp or might seem outright problematic."
 tags: ['general', 'commentary']
 ---
 
