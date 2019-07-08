@@ -15,7 +15,7 @@ This is, shockingly, one of the hardest points to convey with performance, and y
 
 https://twitter.com/amarkon88/status/1082363368361639937
 
-This tweet apparently resonated with people quite well, including Dan Abramov (RIP my mentions), and it was 100 percent true. For every bit of advice you see someone touting on the Internet (including mine), take it with a grain of salt and examine it critically to see if it even applies to your application, let alone whether or not it will help. Some organizations can't adopt GraphQL immediately, others are tied to infrastrucutre that doesn't support code splitting. Take all performance advice as a suggestion that has no knowledge of your product or your environmental constraints.
+This tweet apparently resonated with people quite well, including Dan Abramov (RIP my mentions), and it was 100 percent true. For every bit of advice you see someone touting on the Internet (including mine), take it with a grain of salt and examine it critically to see if it even applies to your application, let alone whether or not it will help. Some organizations can't adopt GraphQL immediately, others are tied to infrastructure that doesn't support code splitting. Take all performance advice as a suggestion that has no knowledge of your product or your environmental constraints.
 
 ## All changes should be data driven
 
