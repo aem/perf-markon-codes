@@ -56,8 +56,7 @@ function SEO({ description, lang, meta, slug, title }) {
         },
         {
           property: `og:image`,
-          content:
-            'https://www.dropbox.com/s/8ops1vkf2x8tfpo/adam_markon_headshot_cropped.jpg?dl=0',
+          content: 'https://perf.markon.codes/adam_markon_headshot_cropped.jpg',
         },
         {
           property: `og:url`,
@@ -65,8 +64,7 @@ function SEO({ description, lang, meta, slug, title }) {
         },
         {
           property: `twitter:image`,
-          content:
-            'https://www.dropbox.com/s/8ops1vkf2x8tfpo/adam_markon_headshot_cropped.jpg?dl=0',
+          content: 'https://perf.markon.codes/adam_markon_headshot_cropped.jpg',
         },
         {
           name: `twitter:card`,
