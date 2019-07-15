@@ -52,12 +52,22 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content:
+            'https://www.dropbox.com/s/8ops1vkf2x8tfpo/adam_markon_headshot_cropped.jpg?dl=0',
+        },
+        {
+          property: `twitter:image`,
+          content:
+            'https://www.dropbox.com/s/8ops1vkf2x8tfpo/adam_markon_headshot_cropped.jpg?dl=0',
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.social.twitter,
         },
         {
           name: `twitter:title`,
