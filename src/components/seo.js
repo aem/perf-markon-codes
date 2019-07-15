@@ -58,6 +58,8 @@ function SEO({ description, lang, meta, slug, title }) {
           property: `og:image`,
           content: 'https://perf.markon.codes/adam_markon_headshot_cropped.jpg',
         },
+        { property: 'og:image:width', content: '500' },
+        { property: 'og:image:height', content: '500' },
         {
           property: `og:url`,
           content: `https://perf.markon.codes${slug}`,
