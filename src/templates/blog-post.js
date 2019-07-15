@@ -19,7 +19,29 @@ const Tags = styled.p`
   font-style: italic;
 `;
 
+const TweetButton = styled.a`
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #00aced;
+  padding: 5px 10px;
+  margin: 20px;
+  font-size: 0.9rem;
+  position: relative;
+  top: -4px;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+
+  &:hover {
+    background-color: #00aced;
+    color: #ffffff;
+  }
+`;
+
 class BlogPostTemplate extends React.Component {
+  getTweet = () => {
+    return `"${this.props.data.markdownRemark.frontmatter.title}" by @amarkon88 https://perf.markon.codes${this.props.pageContext.slug}`;
+  };
+
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
@@ -58,7 +80,18 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <EndOfStory>⏭</EndOfStory>
+        <EndOfStory>
+          ⏭
+          <TweetButton
+            href={`https://twitter.com/home?status=${encodeURI(
+              this.getTweet()
+            )}`}
+            target="_blank"
+            rel="noopener nofollow noreferrer"
+          >
+            Share this post on Twitter
+          </TweetButton>
+        </EndOfStory>
         <hr
           style={{
             marginBottom: rhythm(1),
