@@ -52,6 +52,7 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          slug={this.props.pageContext.slug}
         />
         <h1
           style={{

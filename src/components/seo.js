@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, slug, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,9 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            social {
+              twitter
+            }
           }
         }
       }
@@ -55,6 +58,10 @@ function SEO({ description, lang, meta, title }) {
           property: `og:image`,
           content:
             'https://www.dropbox.com/s/8ops1vkf2x8tfpo/adam_markon_headshot_cropped.jpg?dl=0',
+        },
+        {
+          property: `og:url`,
+          content: `https://perf.markon.codes${slug}`,
         },
         {
           property: `twitter:image`,

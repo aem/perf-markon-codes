@@ -20,7 +20,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="All posts" slug="" />
         <Bio />
         <H2>Recent posts:</H2>
         {posts.map(({ node }) => {
