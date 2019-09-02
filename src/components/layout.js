@@ -7,7 +7,7 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import '../style/prism-numbers-custom.css';
 import '../style/twitter-card-override.css';
 
-const EDGE_COLOR = 'rgba(64,191,255, 0.7)';
+const EDGE_COLOR = 'rgba(64,191,255, 0.5)';
 
 const Footer = styled.div`
   padding-top: 1.5rem;
